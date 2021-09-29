@@ -3,19 +3,39 @@
 
 #include <iostream>
 using namespace std;
-
 int main()
 {
-    cout << "Hello World!\n";
+    int choice;
+
+    cout << "******Welcome to EDMS project by Group 3\n";
+    cout << "Press 1 to add new employee's record\n";
+    cout << "Press 2 to delete an employee's record\n";
+    cout << "Press 3 to update an employee's record\n";
+    cout << "Press 4 to search an employee's record\n";
+    cout << "Enter your choice: ";
+    cin >> choice;
+
+    switch (choice)
+    {
+    case 1:
+        cout << "Add an employee's record.\n";
+        break;
+
+    case 2:
+        cout << "Delete an employee's record.\n";
+        break;
+
+    case 3:
+        cout << "Update an employee's record.\n";
+        break;
+
+    case 4:
+        cout << "Search an employee's record.\n";
+        break;
+
+    default:
+        cout << "Invalid choice\n";
+    }
+
+    return 0;
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
