@@ -6,6 +6,7 @@ using namespace std;
 
 int main()
 {
+    //This is the basic switch-case for phase 1 of the project
     
     
     int choice;
