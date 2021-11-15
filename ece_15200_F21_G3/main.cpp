@@ -1,45 +1,49 @@
-// ece_15200_F21_G3.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
-#include <iostream>
-using namespace std;
+#include "edms.h"
 
 int main()
 {
-    //This is the basic switch-case for phase 1 of the project
+    // Arrays for maintaining employees' records
+    string name[100]; // contains employees' names
+    string dept[100]; // contains employees' departments
+    string doj[100] ; // contains employees' start date
+    int  empid[100];  // contains employees' IDs
+    int  salary[100]; // contains employess' annual salary
     
+    int  num_emp = 0; // number of employees in the database
+    int  choice;      // operation choice
     
-    int choice;
-
-    cout << "******Welcome to EDMS project by Group 3\n";
-    cout << "Press 1 to add new employee's record\n";
-    cout << "Press 2 to delete an employee's record\n";
-    cout << "Press 3 to update an employee's record\n";
-    cout << "Press 4 to search an employee's record\n";
-    cout << "Enter your choice: ";
-    cin >> choice;
-
-    switch (choice)
-    {
-    case 1:
-        cout << "Add an employee's record.\n";
-        break;
-
-    case 2:
-        cout << "Delete an employee's record.\n";
-        break;
-
-    case 3:
-        cout << "Update an employee's record.\n";
-        break;
-
-    case 4:
-        cout << "Search an employee's record.\n";
-        break;
-
-    default:
-        cout << "Invalid choice\n";
-    }
+    cout << "******** Welcome to EDMS project ***********\n";
+    do {
+        cout << "0. Display all employees information\n";
+        cout << "1. Add a new employee's record\n";
+        cout << "2. Delete an employee's record\n";
+        cout << "3. Update an employee's record\n";
+        cout << "4. Search an employee's record\n";
+        cout << "Enter your choice: ";
+        cin >> choice;
+        cout << endl;
+        switch (choice)
+        {
+        case 0:
+            displayEmployees(num_emp, name, empid, dept, doj, salary);
+            break;
+        case 1:
+            addEmployee(num_emp, name, empid, dept, doj, salary);
+            break;
+        case 2:
+            deleteEmployee(num_emp, name, empid, dept, doj, salary);
+            break;
+        case 3:
+            updateEmployee(num_emp, name, empid, dept, doj, salary);
+            break;
+        case 4:
+            searchEmployee(num_emp, name, empid, dept, doj, salary);
+            break;
+        default:
+            cout << "******* Closing EDMS ************\n";
+        }
+        cout << endl;
+    } while (choice >= 0 && choice <= 4);
 
     return 0;
 }
