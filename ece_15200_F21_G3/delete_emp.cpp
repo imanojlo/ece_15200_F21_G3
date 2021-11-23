@@ -15,7 +15,7 @@ void deleteEmployee(int &num, string name[], int empid[],
 	int eid, loc = -1;
 
 	if (num >= 1) {
-		cout << "Enter employee ID:";
+		cout << "Enter employee ID: ";
 		cin >> eid;
 
 		// Find the location, loc, of given employee ID
@@ -43,8 +43,8 @@ void deleteEmployee(int &num, string name[], int empid[],
 
 		for (int i = loc; i <= num; i++) {
 			int temp = empid[i];
-			empid[i + 1] = empid[i];
-			empid[i + 1] = empid[i];
+			empid[i] = empid[i + 1];
+			empid[i + 1] = temp;
 
 		}
 		

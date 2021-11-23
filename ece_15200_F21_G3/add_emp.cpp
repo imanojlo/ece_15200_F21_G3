@@ -40,6 +40,12 @@ void addEmployee(int &num, string name[], int empid[],
 
 		empid[loc] = id;
 
+		for (int j = 0; j < num; j++) {
+			if (id == empid[j]) {
+				cout << "You must enter a new unique Employee ID." << endl;
+				return;
+			}
+		}
 
 			cout << "Enter employee's name: ";
 			cin.ignore();
@@ -52,9 +58,8 @@ void addEmployee(int &num, string name[], int empid[],
 				
 				cout << "Enter employee's start date: (MM/DD/YYYY) ";
 				cin >> doj[loc];
-
 				
-				if (doj[loc] == "##/##/####") {
+				if (doj[loc][2] == '/' && doj[loc][5] == '/') {
 
 					cout << "Enter employee's annual salary: (Between 30000 and 200000) ";
 					cin >> salary[loc];
@@ -70,7 +75,7 @@ void addEmployee(int &num, string name[], int empid[],
 					
 				}
 				else {
-					cout << "You must enter a proper date of join." << endl;
+					cout << "You must enter a proper date of join. (MM/DD/YYYY)" << endl;
 
 				}
 
