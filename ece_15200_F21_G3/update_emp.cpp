@@ -11,7 +11,7 @@ using namespace std;
  salary: array contains employess' annual salary
 */
 
-Void updateEmployee(int num, string *name[], int *empid[], string *dept[], string *doj[], int *salary[])
+void updateEmployee(int num, string name[], int empid[], string dept[], string doj[], int salary[])
 {
 
     int eid;
