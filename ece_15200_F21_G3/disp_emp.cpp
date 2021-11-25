@@ -5,7 +5,7 @@
  name:   array contains employees' names
  empid:  array contains employees' IDs
  dept:   array contains employees' departments
- doj:    array contains employees' start date
+ doj:    array contains employees' start date n 
  salary: array contains employess' annual salary
 */
 
