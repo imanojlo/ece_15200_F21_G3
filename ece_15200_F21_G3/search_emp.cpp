@@ -64,16 +64,16 @@ void searchEmployee(int num, string name[], int empid[],
 
 	else
 	{
-		int emp_name = 0;
 		int j = 0;
 		int flag = 0;
+		string emp_name;
 
 		cout << "Please enter the name of the employee you wish to search for: ";
 		cin >> emp_name;
 	
 		for (int j = 0; j < num; j++)
 		{
-			if (name[j] = emp_name)
+			if (name[j].compare(emp_name)==0)
 			{
 				flag = 1;
 				cout << "Employee ID:" << empid[j] << "\n";
